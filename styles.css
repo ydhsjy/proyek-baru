@@ -1,0 +1,162 @@
+:root {
+  --bg: #f6f9fc;
+  --primary: #0057b8;
+  --dark: #12263f;
+  --white: #ffffff;
+  --muted: #5b6b7a;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background: var(--bg);
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(135deg, #003a7a, #0057b8);
+  color: var(--white);
+  padding-bottom: 5rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+.logo {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.menu a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.hero-content {
+  padding: 4rem 0 0;
+  max-width: 700px;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0.6rem 0 1rem;
+}
+
+.tagline {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background: var(--white);
+  color: var(--primary);
+  padding: 0.65rem 1rem;
+  border-radius: 6px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.section-alt {
+  background: #e9f1fb;
+}
+
+.stats,
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.stats article,
+.card {
+  background: var(--white);
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.profile p {
+  color: var(--muted);
+}
+
+.contact-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border: 1px solid #ccd6e0;
+  border-radius: 8px;
+}
+
+#formMessage {
+  min-height: 1.2rem;
+  font-size: 0.95rem;
+  color: #0f5132;
+}
+
+footer {
+  background: #0d1f33;
+  color: #c8d3df;
+  padding: 1rem 0;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .contact-wrap {
+    grid-template-columns: 1fr;
+  }
+}
